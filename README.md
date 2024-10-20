@@ -17,7 +17,7 @@ A full-stack application for managing employees using **Angular** (frontend) and
 
 1. Clone the frontend repository:
    ```bash
-   git clone https://github.com/your-username/employee-management-frontend.git
+   git clone https://github.com/Siddhantthorat/employee-management-frontend.git
    cd employee-management-frontend
    npm install
    ng serve
