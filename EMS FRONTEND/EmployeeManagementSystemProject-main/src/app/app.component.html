@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="https://img.icons8.com/ios/50/ffffff/employee-card.png" alt="Employee Management" style="height: 40px; margin-right: 10px;">
+      Employee Management System
+    </a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="logout" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<style>
+  body {
+    background-image: url('https://www.shutterstock.com/image-photo/corporate-data-management-system-dms-260nw-608522507.jpg');
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+  }
+</style>

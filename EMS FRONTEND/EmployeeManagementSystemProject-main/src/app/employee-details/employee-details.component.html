@@ -1,0 +1,62 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  h3 {
+    color: #1e90ff;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .employee-details-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Added margin for spacing from the footer */
+  }
+
+  .employee-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .btn-success {
+    margin-top: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .details-row {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    min-height: calc(100vh - 100px); /* Adjust this value according to your footer height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+  }
+</style>
+
+<div class="container mt-5">
+ 
+    <h3>View Employee Details</h3>
+    <div class="employee-details-card text-center p-4 border rounded shadow">
+      <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Employee Photo" class="employee-img mb-3">
+      <div class="details-row"><label><strong>First Name:</strong></label> {{employee.firstName}}</div>
+      <div class="details-row"><label><strong>Last Name:</strong></label> {{employee.lastName}}</div>
+      <div class="details-row"><label><strong>Id:</strong></label> {{employee.id}}</div>
+      <div class="details-row"><label><strong>Designation:</strong></label> {{employee.designation}}</div>
+      <div class="details-row"><label><strong>Department:</strong></label> {{employee.department}}</div>
+      <div class="details-row"><label><strong>Phone Number:</strong></label> {{employee.phoneNo}}</div>
+      <div class="details-row"><label><strong>Address:</strong></label> {{employee.address}}</div>
+      <div class="details-row"><label><strong>CTC:</strong></label> {{employee.total}}</div>
+      <button (click)="onback()" class="btn-primary mb-3">Back</button>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+html, body {
+    height: 100%; /* Full height for body */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Column layout to separate header/content/footer */
+  }
+  
+  body {
+    overflow: hidden; /* Prevent page from overflowing, but allow container scrolling */
+  }
+  
+  .container {
+    flex-grow: 1; /* Make container fill remaining space */
+    overflow-y: auto; /* Allow vertical scrolling for the container */
+    padding-bottom: 50px; /* Add padding to avoid overlap with footer */
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #litheader {
+    text-align: center;
+    color: #1e90ff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }

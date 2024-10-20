@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+/* .footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 40px;
+    background-color:#4284f5;
+    text-align: center;
+    color: white;
+} */
+
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0;
+  }
+  
+  .footer {
+    position: fixed; /* Keep footer at the bottom of the viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: #4284f5; /* Set background color if needed */
+    text-align: center;
+    padding: 10px 0; /* Adjust padding for spacing */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a nicer look */
+  }
+  

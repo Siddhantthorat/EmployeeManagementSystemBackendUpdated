@@ -1,0 +1,74 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .col-md-6 {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  h4 {
+    text-align: center;
+    color: #1e90ff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .form-control {
+    border-radius: 5px;
+  }
+
+  .btn-success {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+  }
+
+  .btn-success:hover {
+    background-color: #1c86ee;
+    border-color: #1c86ee;
+  }
+
+  small {
+    font-size: 12px;
+  }
+</style>
+
+<div class="col-md-6 offset-md-3">
+  <h4>REGISTER USER</h4>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" [class.is-invalid]="un.invalid && un.touched" required
+        [(ngModel)]="user.userName" name="username" #un="ngModel">
+      <small class="text-danger" [class.d-none]="un.valid || un.untouched">Username is required</small>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" [class.is-invalid]="pw.invalid && pw.touched" required
+        [(ngModel)]="user.password" name="password" #pw="ngModel">
+      <small class="text-danger" [class.d-none]="pw.valid || pw.untouched">Password is required</small>
+    </div>
+
+    <div class="form-group">
+      <label>Active</label>
+      <input type="text" class="form-control" [class.is-invalid]="active.invalid && active.touched" required
+        [(ngModel)]="user.active" name="active" #active="ngModel">
+      <small class="text-danger" [class.d-none]="active.valid || active.untouched">Active is required</small>
+    </div>
+
+    <div class="text-center">
+      <button (click)="onback()" class="btn btn-secondary" type="button">Back</button>
+      <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid" style="margin-left: 10px">Submit</button>
+    </div>
+  </form>
+</div>

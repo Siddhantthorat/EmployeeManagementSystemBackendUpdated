@@ -1,0 +1,79 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  h4 {
+    color: #1e90ff;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .table {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+  }
+
+  .btn-primary:hover {
+    background-color: #1c86ee;
+    border-color: #1c86ee;
+  }
+
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .btn {
+    margin: 0 5px;
+  }
+</style>
+
+<div class="container mt-5">
+  <h4>EMPLOYEE LIST</h4>
+
+  <div class="text-right mb-3">
+    <button (click)="goHome()" class="btn btn-primary">Go to Home</button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>FIRST NAME</th>
+          <th>LAST NAME</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td class="action-buttons">
+            <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+            <button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
+            <button (click)="employeeDetails(employee.id)" class="btn btn-info">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
